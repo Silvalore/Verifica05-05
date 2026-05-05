@@ -7,5 +7,17 @@ $password = "verifica"
 
 $istanza = new mysql($host,$dbname,$user,$password);
 
-if($istanza)
+f($istanza -> connect_error) {
+    die("db non raggiungibile")
+}
+
+$notifica ="";
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $task = $_POST['task'] ?? '';
+
+    if($task === 'nuovo_membro'){
+        $id_membro = $istanza ->real_escape_string
+    }
+}
+
 ?>
