@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($user === 'lorenzo' && $password === 'verifica') {
         $_SESSION['username'] = $user;
         $_SESSION['logged_in'] = true;
-        header("Location: index.php");
+        header("Location: pdo.php");
         exit();
     } else {
         $error = "Username o password errati!";
@@ -18,11 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-    header("Location: index.php");
+    header("Location: pdo.php");
     exit();
 }
-?>
-
 ?>
 
 <!DOCTYPE html>
@@ -39,5 +37,3 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
     </body>
 
     </html>
-
-   
