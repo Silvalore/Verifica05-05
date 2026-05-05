@@ -21,8 +21,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $id_membro = $istanza ->real_escape_string($_POST['id_membro']);
         $data_iscrizione = $istanza ->real_escape_string($_POST['data_iscrizione']);
         $orario_preferito = $istanza ->real_escape_string($_POST['orario_preferito']);
-        $istanza ->query("INSERT INTO iscrizioni_corsi(id_iscrizione,id_corso,id_membro,data_iscrizione,orario_preferito") VALUES ('','','','','')
+       $istanza ->query("INSERT INTO iscrizioni_corsi(id_iscrizione,id_corso,id_membro,data_iscrizione,orario_preferito") VALUES ('$id_iscrizione','$id_corso',' $id_membro','$data_iscrizione','$orario_preferito')");
+        $notifica = "Membro aggiunto";
     }
 }
 
+if(insert($_GET['return_membro])){
+
+$item_id = intual
 ?>
