@@ -1,0 +1,11 @@
+<?php
+
+$host = "localhost"
+$dbname = 'silva.gym';
+$user = "lorenzo"
+$password = "verifica"
+
+$istanza = new mysql($host,$dbname,$user,$password);
+
+if($istanza)
+?>
