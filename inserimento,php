@@ -16,7 +16,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $task = $_POST['task'] ?? '';
 
     if($task === 'nuovo_membro'){
-        $id_membro = $istanza ->real_escape_string
+         $id_iscrizione = $istanza ->real_escape_string($_POST['id_membro']);
+        $id_corso= $istanza ->real_escape_string($_POST['id_corso']);
+        $id_membro = $istanza ->real_escape_string($_POST['id_membro']);
+        $data_iscrizione = $istanza ->real_escape_string($_POST['data_iscrizione']);
+        $orario_preferito = $istanza ->real_escape_string($_POST['orario_preferito']);
+        $istanza ->query("INSERT INTO iscrizioni_corsi(id_iscrizione,id_corso,id_membro,data_iscrizione,orario_preferito") VALUES ('','','','','')
     }
 }
 
